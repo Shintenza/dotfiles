@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+VOL="$(pamixer --get-volume)"
+ICON=""
+
+if ["${VOL}" == ""]; then
+	dwm-volume
+	pkill -RTMIN+6 dwmblocks
+fi
+
+if [ "${VOL}" -ge 0 ] && [ "${VOL}" -le  30 ]; then
+	ICON=""
+elif [ "${VOL}" -gt 30 ] && [ "${VOL}" -le 60 ]; then
+	ICON=""
+else
+	ICON=""
+fi
+
+echo "${ICON} ${VOL}%"

@@ -1,0 +1,64 @@
+#!/bin/bash
+
+## Get colors from .Xresources -------------------------------#
+xrdb ~/.Xresources
+getcolors () {
+	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
+	BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
+	BLACK=$(xrdb -query | grep 'color0:'| awk '{print $NF}')
+	RED=$(xrdb -query | grep 'color1:'| awk '{print $NF}')
+	GREEN=$(xrdb -query | grep 'color2:'| awk '{print $NF}')
+	YELLOW=$(xrdb -query | grep 'color3:'| awk '{print $NF}')
+	BLUE=$(xrdb -query | grep 'color4:'| awk '{print $NF}')
+	MAGENTA=$(xrdb -query | grep 'color5:'| awk '{print $NF}')
+	CYAN=$(xrdb -query | grep 'color6:'| awk '{print $NF}')
+	WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
+}
+getcolors
+
+## Configurations -------------------------------#
+bspc monitor -d 'I' 'II' 'III' 'IV' 'V' 
+bspc config border_width 1
+bspc config window_gap 10
+bspc config split_ratio 0.50
+
+bspc config focused_border_color "$BLUE" 
+bspc config normal_border_color "$BACKGROUND"
+bspc config active_border_color "$MAGENTA"
+bspc config presel_feedback_color "$GREEN"
+bspc config click_to_focus true
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+bspc config paddingless_monocle true
+bspc config single_monocle false
+bspc config focus_follows_pointer true
+bspc config ignore_ewmh_focus true
+
+
+## Window rules -------------------------------#
+
+# remove all rules first
+bspc rule -r *:*
+bspc rule -a Gimp state=floating
+bspc rule -a Brave-browser desktop='^2'
+bspc rule -a discord desktop='^3'
+bspc rule -a Code desktop='^4'
+bspc rule -a Emacs desktop='4' state=tiled
+
+
+## Autostart -------------------------------#
+killall -9 sxhkd xsettingsd dunst xfce4-power-manager
+sxhkd &
+xfce4-power-manager &
+xsetroot -cursor_name left_ptr
+
+# Compositor settings 
+killall -q compton
+while pgrep -u $UID -x compton >/dev/null; do sleep 1; done
+compton --config ~/.config/bspwm/compton.conf &
+feh --bg-fill ~/Obrazy/wallpaper.jpg &
+./.config/polybar/launch.sh &
+setxkbmap pl &
+redshift -l 50.60705:22.10381 & 
+xautolock -time 10 -locker 'i3lock-fancy' &	
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+RANDOM_NUMBER=$(($RANDOM % 4 +1))
+DIR="$HOME/Pictures/wallpapers"
+WALLPAPER="${DIR}/wallpaper-${RANDOM_NUMBER}.png"
+feh --bg-fill "${WALLPAPER}" & 

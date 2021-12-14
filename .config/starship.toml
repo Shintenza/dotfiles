@@ -1,0 +1,17 @@
+add_newline = false
+format = """
+[┌───](bold green) $all"""
+
+
+[character]                          
+success_symbol = "[└─ ](bold green)"
+error_symbol = "[└─ ](bold green)[✗](bold red)"
+
+[username]
+disabled = false
+show_always = true
+format = "[$user]($style) "
+
+[directory]
+format = "   [$path]($style)[$read_only]($read_only_style) "
+

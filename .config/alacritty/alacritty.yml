@@ -1,0 +1,84 @@
+env:
+  TERM: xterm-256color
+
+window:
+  #position:
+  #  x: 0
+  #  y: 0
+
+  padding:
+    x: 6
+    y: 6
+
+  dynamic_padding: true
+
+  title: Alacritty
+
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+scrolling:
+  history: 5000
+
+tabspaces: 4
+
+# Font configuration
+font:
+  normal:
+    family: FiraCode Nerd Font
+    style: Regular
+
+  bold:
+    family: FiraCode Nerd Font
+    style: Bold
+
+  italic:
+    family: FiraCode Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: FiraCode Nerd Font
+    style: Bold Italic
+
+  size: 9
+  offset:
+    x: 0
+    y: 1
+
+  #glyph_offset:
+  #  x: 0
+  #  y: 0
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+
+colors:
+  # Default colors
+  primary:
+    background: "0x101010"
+    foreground: "0xb9b9b9"
+
+  # Normal colors
+  normal:
+    black: "0x101010"
+    red: "0x7c7c7c"
+    green: "0x8e8e8e"
+    yellow: "0xa0a0a0"
+    blue: "0x686868"
+    magenta: "0x747474"
+    cyan: "0x868686"
+    white: "0xb9b9b9"
+
+  # Bright colors
+  bright:
+    black: "0x525252"
+    red: "0x7c7c7c"
+    green: "0x8e8e8e"
+    yellow: "0xa0a0a0"
+    blue: "0x686868"
+    magenta: "0x747474"
+    cyan: "0x868686"
+    white: "0xf7f7f7"
+
+background_opacity: 0.90

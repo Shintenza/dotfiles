@@ -1,0 +1,14 @@
+#!/bin/bash
+
+BRTNS="$(xbacklight -get)" 
+ICON=""
+
+if [ "${BRTNS}" -ge 0 ] && [ "${BRTNS}" -le 30 ]; then
+	ICON=""
+elif [ "${BRTNS}" -gt 30 ] && [ "${BRTNS}" -le 60 ]; then
+	ICON=""
+else
+	ICON=""
+fi
+
+echo "${ICON} ${BRTNS}%"
