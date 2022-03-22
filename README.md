@@ -4,7 +4,7 @@ This is my collection of config files. If you like dark colors, simplicity and e
 
 ## Theming
 
-1. GTK Theme - [Midnight-GrayNight](https://dllb.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2MzEyOTI4MTIiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6Ijc3Mzg1NWY3NzJiODA3MGZhMzcwMTcyNjc0YmIxMjAzZTk5YmVjNjVhZWFkNTcwZjE2M2RiM2Q5ZmQzZGQyNzMxZjQ1MzU5OTA1NjFmM2NjYjMyZDYzOWQwNzMzOGNmZTg5NzI2NGZjNjFmYWMxNDJkZjM0ZDk1MGMwN2Y4YWNmIiwidCI6MTYzMTcyNTc1Nywic3RmcCI6IjA1NmZmZjhlYzlhOTc4Nzc4ZWNkZjBjYzQzOGYxYjU5Iiwic3RpcCI6IjE3OC4yMTQuMzAuMjMxIn0.4vLaJPMA3IxDRCjfBUsO-C2mjHKO0LbOIxq-tQ8Tof0/Midnight-GrayNight.tar.gz)
+1. GTK Theme - [Colloid](https://github.com/vinceliuice/Colloid-gtk-theme)
 2. GTK Icons - [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
 4. Terminal font - FiraCode Nerd Font ([download here](https://www.nerdfonts.com/font-downloads))
 5. Dwm bar font - Iosevka Nerd Font ([download here](https://www.nerdfonts.com/font-downloads))
