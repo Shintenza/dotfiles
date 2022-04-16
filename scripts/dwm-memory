@@ -1,0 +1,5 @@
+#!/bin/bash
+
+MEMORY_USAGE=$(free -m | awk '/^Mem:/ {print $3\" MiB\"}')
+
+echo "﬙ ${MEMORY_USAGE}%"
