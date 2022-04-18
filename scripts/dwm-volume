@@ -4,10 +4,10 @@
 VOL="$(pamixer --get-volume)"
 ICON=""
 
-if ["${VOL}" == ""]; then
-	dwm-volume
-	pkill -RTMIN+6 dwmblocks
-fi
+#if ["${VOL}" == ""]; then
+#	dwm-volume
+#	pkill -RTMIN+6 dwmblocks
+#fi
 
 if [ "${VOL}" -ge 0 ] && [ "${VOL}" -le  30 ]; then
 	ICON=""

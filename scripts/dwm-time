@@ -2,4 +2,4 @@
 
 TIME=$(date +%H:%M)
 
-echo " ${TIME}%"
+echo " ${TIME}"
