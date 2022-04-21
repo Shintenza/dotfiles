@@ -1,10 +1,13 @@
 #!/bin/zsh
 
+#!/bin/zsh
+
 . $HOME/.zshrc
-wallpaper &
+xsetroot -cursor_name left_ptr
+feh --bg-fill --randomize $HOME/Pictures/wallpapers/* &
 setxkbmap pl &
 redshift -l 50.60705:22.10381 & 
 /usr/bin/lxpolkit &
-picom -b &
+picom -b --experimental-backends &
 sleep 2; dwmblocks &
-xautolock -time 10 -locker "betterlockscreen -l blur" -detectsleep
+xidlehook --not-when-fullscreen --not-when-audio --timer 600 'betterlockscreen -l blur'
