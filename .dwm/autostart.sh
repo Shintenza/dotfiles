@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 . $HOME/.zshrc
 xsetroot -cursor_name left_ptr
@@ -11,4 +11,4 @@ dwmblocks &
 xidlehook --not-when-fullscreen --not-when-audio \
     --timer 580 'xbacklight -set 5' 'xbacklight -set 100' \
     --timer 20 'xbacklight -set 100; betterlockscreen -l' '' \
-    --timer 600 'systemctl suspend' ''\
+    --timer 600 'systemctl suspend' ''
