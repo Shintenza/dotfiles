@@ -1,0 +1,11 @@
+#!/bin/bash
+
+. ~/.local/bin/theme
+
+case $BLOCK_BUTTON in
+	1) pamixer -t;;
+	4) pamixer --allow-boost -i 1 ;;
+	5) pamixer --allow-boost -d 1 ;;
+esac
+
+echo "^c$black^^b$darkblue^  ^b$blue^ $(date '+%a %d, %H:%M') ^d^"

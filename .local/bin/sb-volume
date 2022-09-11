@@ -1,0 +1,25 @@
+#!/bin/bash
+
+. ~/.local/bin/theme
+
+case $BLOCK_BUTTON in
+	1) pamixer -t;;
+	4) pamixer --allow-boost -i 1 ;;
+	5) pamixer --allow-boost -d 1 ;;
+esac
+
+vol="$(pamixer --get-volume)"
+icon=""
+
+if [ -z "$vol" ] || [ $(pamixer --get-mute) = true ]; then
+    echo " ^c$green^婢 Muted"
+else
+    if [ "${vol}" -ge 0 ] && [ "${vol}" -le  30 ]; then
+        icon=""
+    elif [ "${vol}" -gt 30 ] && [ "${vol}" -le 60 ]; then
+        icon=""
+    else
+        icon=""
+    fi
+echo " ^c$green^$icon $vol%"
+fi

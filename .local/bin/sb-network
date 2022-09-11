@@ -1,0 +1,15 @@
+#!/bin/sh
+
+. ~/.local/bin/theme
+
+if [ $(cat /sys/class/net/w*/operstate 2>/dev/null) = up ]; then
+    wifi_name=$(nmcli -t -f name,device connection show --active | grep wlp3s0 | cut -d\: -f1) 
+    wifi_icon=" "
+    echo "^c$black^ ^b$blue^ $wifi_icon ^d^ ^c$blue^$wifi_name"
+elif [ $(cat /sys/class/net/e*/operstate 2>/dev/null) = up ]; then
+	eth_icon=""
+    printf "^c$black^ ^b$blue^ $eth_icon^d^%s" " ^c$blue^Connected"
+    echo "$eth"
+else
+    echo "^c$black^ ^b$blue^ 󰤭 ^d^ ^c$blue^Disconnected"
+fi
