@@ -1,0 +1,17 @@
+dmenu.normbgcolor: #1e222a
+dmenu.normfgcolor: #bbbbbb
+dmenu.selbgcolor: #3f495c
+dmenu.selfgcolor: #eeeeee
+
+dwm.statusbgcolor:      #1e222a
+dwm.statusfgcolor:      #bbbbbb
+dwm.norminfobgcolor:    #1e222a
+dwm.norminfofgcolor:    #bbbbbb
+dwm.selinfobgcolor:     #3f495c
+dwm.selinfofgcolor:     #eeeeee
+dwm.normtagsbgcolor:    #1e222a
+dwm.normtagsfgcolor:    #bbbbbb
+dwm.seltagsbgcolor:     #3f495c
+dwm.seltagsfgcolor:     #eeeeee
+dwm.selbordercolor:     #005577
+dwm.normbordercolor:    #444444
