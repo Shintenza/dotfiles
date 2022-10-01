@@ -1,0 +1,16 @@
+#!/bin/bash
+
+options=(" Poweroff" " Reboot" " Logout" "鈴 Suspend")
+choice=$(printf '%s\n' "${options[@]}" | dmenu -c -g 1 -l ${#options[@]})
+
+if [ "$choice" == "${options[0]}" ]; then
+    sudo poweroff
+elif [ "$choice" == "${options[1]}" ]; then
+    sudo reboot
+elif [ "$choice" == "${options[2]}" ]; then
+    killall dwm
+elif [ "$choice" == "${options[3]}" ]; then
+    sudo zzz
+else 
+    exit 1
+fi
